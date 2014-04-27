@@ -1,89 +1,200 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Pebble Config Tool</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<style type="text/css">
-h1 {text-align:center}
-h3 {text-align:center}
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;outline:0;border:0;background:transparent;vertical-align:baseline;font-size:100%}body{background:#FFF;line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-spacing:0;border-collapse:collapse}a{text-decoration:none}a:hover{text-decoration:underline}h2{padding:0 2%;width:96%;height:45px;background:#000;color:#FFF;letter-spacing:.07em;font-weight:300;font-size:14px;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;line-height:45px}h4{margin:10px 0 30px;padding:0 2%;width:96%;height:20px;color:#000;text-align:center;font-weight:700;font-size:11px;font-family:"HelveticaNeue-Bold","Helvetica Neue Bold","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;line-height:20px}h5{margin:5px 0 0;padding:0 2%;width:96%;height:11px;color:#333;text-align:center;font-weight:300;font-size:9px;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;line-height:11px}select{margin:2%;width:96%;border:1px solid gray;background:#EEE;color:#000;font-weight:700;font-size:14px;font-family:"HelveticaNeue-Medium","Helvetica Neue Medium","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif}#cancel{float:left;width:35%;border:0;background:#C33;color:#7A0000;text-align:center;letter-spacing:.08em;font-weight:700;font-size:14px;font-family:"HelveticaNeue-Medium","Helvetica Neue Medium","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;line-height:50px}#save{float:left;width:65%;border:0;background:#3C3;color:#007A00;text-align:center;letter-spacing:.08em;font-weight:700;font-size:14px;font-family:"HelveticaNeue-Medium","Helvetica Neue Medium","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;line-height:50px}
-</style>
-</head>
+  <head>
+    <title>Drunk O' Clock</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="main">
+      <div data-role="header" class="jqm-header">
+        <h1>Drunk O' Clock</h1>
+      </div>
 
-<body>
-<br><h1><b></b> Configure Drunk O' Clock</b></h1><br>
-<h2>Issues? Email me: contact@edwinfinch.com</h2>
+      <div data-role="content">
 
-	<h2>
-		Theme
-	</h2>
+<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="false">
+    <div data-role="collapsible" data-collapsed="false">
+        <h3>Look and Feel</h3>
 
-	<ul>
-		<li>
-			<select id="theme" data-type="int">
-				<option value="4">White on black</option>
-				<option value="5">Black on white (inverted)</option>
-			</select>
-		</li>
-		<h3><i>
-			Choose your preferred colour scheme for the whole watchface.
-		</i></h3><br>
-	<h2>
-		Seconds
-	</h2>
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Theme</legend>
+        <input name="key0" id="key0-0" data-type="int" value="4" checked="checked" type="radio">
+        <label for="key0-0">Dark</label>
+        <input name="key0" id="key0-1" value="5" type="radio">
+        <label for="key0-1">Light</label>
+</fieldset>
 
-	<ul>
-		<li>
-			<select id="seconds" data-type="int">
-				<option value="4">Disable</option>
-				<option value="5">Enable</option>
-			</select>
-		</li>
-		<h3><i>
-			Choose whether or not the seconds will show in the top right corner of the watchface.
-		</i></h3><br>
-	<h2>
-		Word Pack
-	</h2>
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Word Pack</legend>
+        <input name="key1" id="key1-0" value="4" checked="checked" type="radio">
+        <label for="key1-0">Sober (light words, like "frikken")</label>
+        <input name="key1" id="key1-key1" value="5" type="radio">
+        <label for="key1-1">Tipsy (mild words, like "shitting")</label>
+		<input name="key1" id="key1-2" value="6" type="radio">
+        <label for="key1-2">Wasted (heavy words, like "fucking")</label>
+</fieldset>
 
-	<ul>
-		<li>
-			<select id="wordpack" data-type="int">
-				<option value="4">Sober (innocent words, like "frikken")</option>
-				<option value="5">Tipsy (mild words, like "shitting")</option>
-				<option value="6">Wasted (strong words, like "fucking")</option>
-			</select>
-		</li>
-		<h3><i>
-			Choose what kind of adjectives the watchface will say to you.
-		</i></h3><br>
-	</ul><br>
-	<input type="submit" id="cancel" value="Cancel" />
-	<input type="submit" id="save" value="Save" />
+    </div>
+    <div data-role="collapsible">
+        <h3>Features</h3>
 
-	<br style="clear: both;" />
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Bluetooth disconnect alert</legend>
+        <input name="key2" id="key2-0" value="4" checked="checked" type="radio">
+        <label for="key2-0">Off</label>
+        <input name="key2" id="key2-1" value="5" type="radio">
+        <label for="key2-1">Vibration only</label>
+		<input name="key2" id="key2-2" value="6" type="radio">
+        <label for="key2-2">Text alert and vibration</label>
+</fieldset>
 
-	<br><h1>Information:</h1><br>
-	<h2>Website version: 0.1.2</h2>
-	<h2>Latest watchface version: 0.1.5</h2><br>
-	<br>
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Bluetooth reconnect alert</legend>
+        <input name="key3" id="key3-0" value="4" checked="checked" type="radio">
+        <label for="key3-0">Off</label>
+        <input name="key3" id="key3-1" value="5" type="radio">
+        <label for="key3-1">Vibration only</label>
+		<input name="key3" id="key3-2" value="6" type="radio">
+        <label for="key3-2">Text alert and vibration</label>
+</fieldset>
 
-	<h4><i>If connected to the internet, the watch will tell you
-		whether or not it is up to date :)
-	</i></h4>
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Seconds</legend>
+        <input name="key4" id="key4-0" value="4" checked="checked" type="radio">
+        <label for="key4-0">Off</label>
+        <input name="key4" id="key4-1" value="5" type="radio">
+        <label for="key4-1">On</label>
+</fieldset>
 
-	<h5>By: Edwin Finch (Magnitude)<br>and Khal Harris (/u/MiracleFish)<br><i>Pop pop!</i></h5>
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Bottom Slot</legend>
+	<i>Insert X type of data into the bottom line, below the time.</i>
+        <input name="key5" id="key5-0" value="4" checked="checked" type="radio">
+        <label for="key5-0">Date</label>
+        <input name="key5" id="key5-1" value="5" type="radio">
+        <label for="key5-1">Bluetooth status</label>
+		<input name="key5" id="key5-2" value="6" type="radio">
+        <label for="key5-2">Weather</label>
+</fieldset>
 
-	<script src="pconfig.js" type="text/javascript"></script>
+    </div>
+    <div data-role="collapsible">
+        <h3>Weather</h3>
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Update interval/enable weather</legend>
+	<i>Choosing any interval automatically enables the weather.</i>
+        <input name="key6" id="key6-0" value="4" checked="checked" type="radio">
+        <label for="key6-0">Weather off</label>
+        <input name="key6" id="key6-1" value="5" type="radio">
+        <label for="key6-1">15 minutes</label>
+		<input name="key6" id="key6-2" value="6" type="radio">
+        <label for="key6-2">30 minutes</label>
+		<input name="key6" id="key6-3" value="7" type="radio">
+        <label for="key6-3">45 minutes</label>
+		<input name="key6" id="key6-4" value="8" type="radio">
+        <label for="key6-4">60 minutes</label>
+</fieldset>
 
-	<script type="text/javascript">
-		// Initialize PConfig script
-		PConfig.init();
+    </div>
+    <div data-role="collapsible">
+        <h3>Beta Features/Advanced</h3>
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Extra Screen</legend>
+	<i>Will enable a "second screen". If enabled, when you shake your watch it will display the other 2 pieces of data
+	that aren't in the slot below the time.</i>
+        <input name="key7" id="key7-0" value="4" checked="checked" type="radio">
+        <label for="key7-0">Off</label>
+        <input name="key7" id="key7-1" value="5" type="radio">
+        <label for="key7-1">On</label>
+</fieldset>
 
-		// Assign event listeners to out submit and cancel buttons
-		document.getElementById("cancel").addEventListener("click", PConfig.onCancel);
-		document.getElementById("save").addEventListener("click", PConfig.onSubmit);
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Battery Bar</legend>
+	<i>If enabled, a white bar will be displayed below the time (and above the slot) indicating the watch's battery level.</i>
+        <input name="key8" id="key8-0" value="4" checked="checked" type="radio">
+        <label for="key8-0">Off</label>
+        <input name="key8" id="key8-1" value="5" type="radio">
+        <label for="key8-1">On</label>
+</fieldset>
+    </div>
+</div>
+<br />
+        <div class="ui-body ui-body-c">
+          <fieldset class="ui-grid-a">
+              <div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Cancel</button></div>
+              <div class="ui-block-b"><button type="submit" data-theme="a" id="b-submit">Submit</button></div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <script>
+      function saveOptions() {
+        var options = {
+          'theme':     Number( $("input[name=key0]:checked").val() ),
+		  'wordpack':     Number( $("input[name=key1]:checked").val() ),
+		  'btdisalert':     Number( $("input[name=key2]:checked").val() ),
+		  'btrealert':     Number( $("input[name=key3]:checked").val() ),
+		  'seconds':     Number( $("input[name=key4]:checked").val() ),
+		  'bottomslot':     Number( $("input[name=key5]:checked").val() ),
+		  'updateinterval':     Number( $("input[name=key6]:checked").val() ),
+		  'extrascreen':     Number( $("input[name=key7]:checked").val() ),
+		  'batterybar':     Number( $("input[name=key8]:checked").val() ),
+        }
+        return options;
+      }
+
+      $().ready(function() {
+       if (typeof window.localStorage !== "undefined") {
+        if (window.localStorage.pebble_timely_options) {
+          ls_pto = JSON.parse(window.localStorage.pebble_timely_options);
+          // the Pebble webview dies on the next line...
+          $("input[name=key0][id=key0-"+ls_pto["theme"]+"]").prop('checked',true);
+          $("input[name=key0]").checkboxradio('refresh');
+          $("input[name=theme][id=theme-"+ls_pto["wordpack"]+"]").prop('checked',true);
+          $("input[name=theme]").checkboxradio('refresh');
+          $("input[name=key2][id=key2-"+ls_pto["btdisalert"]+"]").prop('checked',true);
+          $("input[name=key2]").checkboxradio('refresh');
+          $("input[name=key3][id=key3-"+ls_pto["btrealert"]+"]").prop('checked',true);
+          $("input[name=key3]").checkboxradio('refresh');
+          $("input[name=key4][id=key4-"+ls_pto["seconds"]+"]").prop('checked',true);
+          $("input[name=key4]").checkboxradio('refresh');
+          $("input[name=key5][id=key5-"+ls_pto["bottomslot"]+"]").prop('checked',true);
+          $("input[name=key5]").checkboxradio('refresh');
+          $("input[name=key6][id=key6-"+ls_pto["updateinterval"]+"]").prop('checked',true);
+          $("input[name=key6]").checkboxradio('refresh');
+          $("input[name=key7][id=key7-"+ls_pto["extrascreen"]+"]").prop('checked',true);
+          $("input[name=key7]").checkboxradio('refresh');
+          $("input[name=key8][id=key8-"+ls_pto["batterybar"]+"]").prop('checked',true);
+          $("input[name=key8]").checkboxradio('refresh');
+        }
+       }
+        $("#b-cancel").click(function() {
+          console.log("Cancel");
+          document.location = "pebblejs://close";
+        });
+
+        $("#b-submit").click(function() {
+          console.log("Submit");
+
+          ls_pto = JSON.stringify(saveOptions());
+          if (typeof window.localStorage !== "undefined") {
+            window.localStorage.pebble_drunkoclock_options = ls_pto;
+          }
+          var location = "pebblejs://close#" + encodeURIComponent(ls_pto);
+          console.log("Warping to: " + location);
+          console.log(location);
+          document.location = location;
+        });
+
+      });
     </script>
-</body>
+  </body>
 </html>
