@@ -198,16 +198,16 @@ will be added soon!
       <input name="key44" id="trans_key44" placeholder="Enter Translation" value="pissing" data-mini="true" type="text" maxlength="11">
     </div>
     <div class="ui-field-contain">
-      <label for="key44" id="label_key44">bastard:</label>
-      <input name="key44" id="trans_key44" placeholder="Enter Translation" value="bastard" data-mini="true" type="text" maxlength="11">
+      <label for="key45" id="label_key44">bastard:</label>
+      <input name="key45" id="trans_key44" placeholder="Enter Translation" value="bastard" data-mini="true" type="text" maxlength="11">
     </div>
     <div class="ui-field-contain">
-      <label for="key45" id="label_key45">freakin:</label>
-      <input name="key45" id="trans_key45" placeholder="Enter Translation" value="freakin" data-mini="true" type="text" maxlength="11">
+      <label for="key46" id="label_key45">freakin:</label>
+      <input name="key46" id="trans_key45" placeholder="Enter Translation" value="freakin" data-mini="true" type="text" maxlength="11">
     </div>
     <div class="ui-field-contain">
-      <label for="key46" id="label_key46">damn:</label>
-      <input name="key46" id="trans_key46" placeholder="Enter Translation" value="damn" data-mini="true" type="text" maxlength="11">
+      <label for="key47" id="label_key46">damn:</label>
+      <input name="key47" id="trans_key46" placeholder="Enter Translation" value="damn" data-mini="true" type="text" maxlength="11">
     </div>
 </fieldset>
 
@@ -295,6 +295,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
           	  'trans_tipsy5': $("input[name=key44]").val(),
           	  'trans_tipsy6': $("input[name=key45]").val(),
           	  'trans_tipsy7': $("input[name=key46]").val(),
+          	  'trans_tipsy8': $("input[name=key47]").val(),
           	  'trans_wasted1': $("input[name=key50]").val(),
           	  'trans_wasted2': $("input[name=key51]").val(),
           	  'trans_wasted3': $("input[name=key52]").val(),
@@ -308,6 +309,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 
       $().ready(function() {
        if (typeof window.localStorage !== "undefined") {
+       	console.log("Not undefined :)");
         if (window.localStorage.pebble_drunkoclock_options) {
           ls_pto = JSON.parse(window.localStorage.pebble_drunkoclock_options);
           // the Pebble webview dies on the next line...
@@ -329,6 +331,33 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
           $("input[name=key7]").checkboxradio('refresh');
           $("input[name=key8][id=key8-"+ls_pto["batterybar"]+"]").prop('checked',true);
           $("input[name=key8]").checkboxradio('refresh');
+          if ("trans_sober1" in ls_pto) {
+            $("input[name=key30]").val(ls_pto["trans_sober1"]);
+            $("input[name=key31]").val(ls_pto["trans_sober2"]);
+            $("input[name=key32]").val(ls_pto["trans_sober3"]);
+            $("input[name=key33]").val(ls_pto["trans_sober4"]);
+            $("input[name=key34]").val(ls_pto["trans_sober5"]);
+            $("input[name=key35]").val(ls_pto["trans_sober6"]);
+            $("input[name=key36]").val(ls_pto["trans_sober7"]);
+          }
+          if ("trans_tipsy1" in ls_pto) {
+            $("input[name=key40]").val(ls_pto["trans_tipsy1"]);
+            $("input[name=key41]").val(ls_pto["trans_tipsy2"]);
+            $("input[name=key42]").val(ls_pto["trans_tipsy3"]);
+            $("input[name=key43]").val(ls_pto["trans_tipsy4"]);
+            $("input[name=key44]").val(ls_pto["trans_tipsy5"]);
+            $("input[name=key45]").val(ls_pto["trans_tipsy6"]);
+            $("input[name=key46]").val(ls_pto["trans_tipsy7"]);
+            $("input[name=key47]").val(ls_pto["trans_tipsy8"]);
+          }
+          if ("trans_wasted1" in ls_pto) {
+            $("input[name=key50]").val(ls_pto["trans_wasted1"]);
+            $("input[name=key51]").val(ls_pto["trans_wasted2"]);
+            $("input[name=key52]").val(ls_pto["trans_wasted3"]);
+            $("input[name=key53]").val(ls_pto["trans_wasted4"]);
+            $("input[name=key54]").val(ls_pto["trans_wasted5"]);
+            $("input[name=key55]").val(ls_pto["trans_wasted6"]);
+          }
         }
        }
         $("#b-cancel").click(function() {
