@@ -308,8 +308,8 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 
       $().ready(function() {
        if (typeof window.localStorage !== "undefined") {
-        if (window.localStorage.pebble_timely_options) {
-          ls_pto = JSON.parse(window.localStorage.pebble_timely_options);
+        if (window.localStorage.pebble_drunkoclock_options) {
+          ls_pto = JSON.parse(window.localStorage.pebble_drunkoclock_options);
           // the Pebble webview dies on the next line...
           $("input[name=key0][id=key0-"+ls_pto["theme"]+"]").prop('checked',true);
           $("input[name=key0]").checkboxradio('refresh');
