@@ -135,6 +135,15 @@ will be added soon!
         <input name="key8" id="key8-1" value="5" type="radio">
         <label for="key8-1">On</label>
 </fieldset>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Vibrate On Watchface Update</legend>
+	<i>If enabled, the watchface will vibrate on the event of a watchface update being available.</i>
+        <input name="key9" id="key9-0" value="5" checked="checked" type="radio">
+        <label for="key9-0">On</label>
+        <input name="key9" id="key9-1" value="4" type="radio">
+        <label for="key9-1">Off</label>
+</fieldset>
     </div>
     
     <div data-role="collapsible">
@@ -286,6 +295,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 		  'updateinterval':     Number( $("input[name=key6]:checked").val() ),
 		  'extrascreen':     Number( $("input[name=key7]:checked").val() ),
 		  'batterybar':     Number( $("input[name=key8]:checked").val() ),
+		  'vibeonupdate': Number( $("input[name=key9]:checked").val() ),
 		  'trans_sober1': $("input[name=key30]").val(),
           	  'trans_sober2': $("input[name=key31]").val(),
           	  'trans_sober3': $("input[name=key32]").val(),
