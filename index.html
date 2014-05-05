@@ -22,7 +22,6 @@
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Theme</legend>
-    <i>Choose your preferred colour preference</i>
         <input name="key0" id="key0-4" data-type="int" value="4" checked="checked" type="radio">
         <label for="key0-4">Dark</label>
         <input name="key0" id="key0-5" value="5" type="radio">
@@ -31,8 +30,7 @@
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Word Pack</legend>
-    <i>Choose how mean you want the watch to be to you. You can change any words at any time in the
-    translation section of the settings.
+    <i>Change any words at any time in the translation section of the settings.
     </i>
         <input name="key1" id="key1-4" value="4" checked="checked" type="radio">
         <label for="key1-4">Sober (light words, like "frikken")</label>
@@ -49,7 +47,6 @@
 <fieldset data-role="controlgroup" data-mini="true">
     <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Bluetooth disconnect alert</legend>
-    <i>Choose how the watch should alert you on bluetooth disconnect.</i>
         <input name="key2" id="key2-4" value="4" checked="checked" type="radio">
         <label for="key2-4">Off</label>
         <input name="key2" id="key2-5" value="5" type="radio">
@@ -61,7 +58,6 @@
 <fieldset data-role="controlgroup" data-mini="true">
     <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Bluetooth reconnect alert</legend>
-    <i>Choose how the watch should alert you on bluetooth reconnect.</i>
         <input name="key3" id="key3-4" value="4" checked="checked" type="radio">
         <label for="key3-4">Off</label>
         <input name="key3" id="key3-5" value="5" type="radio">
@@ -73,7 +69,7 @@
 <fieldset data-role="controlgroup" data-mini="true">
     <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Seconds</legend>
-    <i>If enabled, seconds will show up in the top right corner of the screen.</i>
+    <i>Seconds will show up in the top right corner of the screen.</i>
 	<input name="key4" id="key4-4" value="4" checked="checked" type="radio">
         <label for="key4-4">Off</label>
         <input name="key4" id="key4-5" value="5" type="radio">
@@ -83,7 +79,7 @@
 <fieldset data-role="controlgroup" data-mini="true">
     <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Bottom Slot (0.2 beta and above)</legend>
-	<i>Insert X type of data into the bottom line, below the time.</i>
+	<i>Insert X into the bottom line, below the time.</i>
         <input name="key5" id="key5-4" value="4" checked="checked" type="radio">
         <label for="key5-4">Date</label>
         <input name="key5" id="key5-5" value="5" type="radio">
@@ -96,34 +92,39 @@
     <div data-role="collapsible">
         <h3>Weather (Disabled)</h3>
         <hr>
-    <b> This section is DISABLED! That means that no features here currently work in the latest beta, but 
-will be added soon!
+    <b> No features in this section currently work. Weather is coming in 0.3.0 beta.
 </b><br><hr>
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Weather Enabled</legend>
-    <i>Choose how often the weather updates.</i><br>
-    <b>THE WEATHER WILL ONLY SHOW IF YOU HAVE SECOND SCREEN ENABLED. See "Beta features/advanced" section.</b>
+    <i>(Shows weather in second screen)</i>
         	<input name="key62" id="key62-4" value="4" checked="checked" type="radio">
         <label for="key62-4">Off</label>
 		<input name="key62" id="key62-5" value="5" type="radio">
         <label for="key62-5">On</label>
 </fieldset>
+
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-    <legend>Update Interval</legend>
-    <i>Choose how often the weather updates.</i>
+    <legend>Temperature Preference</legend>
+        	<input name="key63" id="key63-4" value="4" checked="checked" type="radio">
+        <label for="key63-4">Celsius</label>
+		<input name="key63" id="key63-5" value="5" type="radio">
+        <label for="key63-5">Fahrenheit</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Update Every...</legend>
         	<input name="key6" id="key6-4" value="4" checked="checked" type="radio">
         <label for="key6-4">15 minutes</label>
 		<input name="key6" id="key6-5" value="5" type="radio">
         <label for="key6-5">30 minutes</label>
 		<input name="key6" id="key6-6" value="6" type="radio">
         <label for="key6-6">45 minutes</label>
-		<input name="key7" id="key6-7" value="7" type="radio">
+		<input name="key6" id="key6-7" value="7" type="radio">
         <label for="key6-8">60 minutes</label>
 </fieldset>
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Location Type</legend>
-	<i>Choose how the phone fetches the data for the weather. The latter is better for battery life.</i>
         <input name="key10" id="key10-4" value="4" checked="checked" type="radio">
         <label for="key10-4">GPS coordinates</label>
         <input name="key10" id="key10-5" value="5" type="radio">
@@ -144,13 +145,13 @@ will be added soon!
 </fieldset>
     </div>
     <div data-role="collapsible">
-        <h3>Beta Features/Advanced</h3>
+        <h3>Advanced</h3>
         <hr>
-<b> If you have 0.2.1 beta or higher you can use these features.
+<b> These features work on 0.2.1 beta and up.
 </b><br><hr>
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Extra Screen</legend>
-	<i>Will enable a "second screen". If enabled, a screen will show with more info such as the weather.</i>
+	<i>If enabled, shake the watch to view extra information.</i>
         <input name="key7" id="key7-4" value="4" checked="checked" type="radio">
         <label for="key7-4">Off</label>
         <input name="key7" id="key7-5" value="5" type="radio">
@@ -286,7 +287,7 @@ will be added soon!
     <div data-role="collapsible">
         <h3>Information and Support</h3>
 <p>Newest watchface version: 0.2.1 beta <br><br>
-Website version: 0.7.3<br><br>
+Website version: 0.7.4<br><br>
 <b>Credits:</b><br> Edwin Finch - Lead developer<br><br>
 <i>www.edwinfinch.com/pebble/ see all my projects</i><br><br>
 Khal Harris - Image, phrase and promotional creation/support (<i>@stuffkhalwrites</i>)<br><br>
