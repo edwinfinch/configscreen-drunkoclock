@@ -22,6 +22,7 @@
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Theme</legend>
+    <i>Choose your preferred colour preference</i>
         <input name="key0" id="key0-4" data-type="int" value="4" checked="checked" type="radio">
         <label for="key0-4">Dark</label>
         <input name="key0" id="key0-5" value="5" type="radio">
@@ -30,6 +31,9 @@
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Word Pack</legend>
+    <i>Choose how mean you want the watch to be to you. You can change any words at any time in the
+    translation section of the settings.
+    </i>
         <input name="key1" id="key1-4" value="4" checked="checked" type="radio">
         <label for="key1-4">Sober (light words, like "frikken")</label>
         <input name="key1" id="key1-5" value="5" type="radio">
@@ -45,6 +49,7 @@
 <fieldset data-role="controlgroup" data-mini="true">
     <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Bluetooth disconnect alert</legend>
+    <i>Choose how the watch should alert you on bluetooth disconnect.</i>
         <input name="key2" id="key2-4" value="4" checked="checked" type="radio">
         <label for="key2-4">Off</label>
         <input name="key2" id="key2-5" value="5" type="radio">
@@ -56,6 +61,7 @@
 <fieldset data-role="controlgroup" data-mini="true">
     <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Bluetooth reconnect alert</legend>
+    <i>Choose how the watch should alert you on bluetooth reconnect.</i>
         <input name="key3" id="key3-4" value="4" checked="checked" type="radio">
         <label for="key3-4">Off</label>
         <input name="key3" id="key3-5" value="5" type="radio">
@@ -67,7 +73,8 @@
 <fieldset data-role="controlgroup" data-mini="true">
     <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Seconds</legend>
-        <input name="key4" id="key4-4" value="4" checked="checked" type="radio">
+    <i>If enabled, seconds will show up in the top right corner of the screen.</i>
+	<input name="key4" id="key4-4" value="4" checked="checked" type="radio">
         <label for="key4-4">Off</label>
         <input name="key4" id="key4-5" value="5" type="radio">
         <label for="key4-5">On</label>
@@ -81,10 +88,8 @@
         <label for="key5-4">Date</label>
         <input name="key5" id="key5-5" value="5" type="radio">
         <label for="key5-5">Bluetooth status</label>
-	<input name="key5" id="key5-6" value="6" type="radio">
-        <label for="key5-6">Weather (does not work, yet)</label>
-        <input name="key5" id="key5-7" value="7" type="radio">
-        <label for="key5-7">Nothing</label>
+        <input name="key5" id="key5-6" value="6" type="radio">
+        <label for="key5-6">Nothing</label>
 </fieldset>
 
     </div>
@@ -95,17 +100,24 @@
 will be added soon!
 </b><br><hr>
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-    <legend>Update interval/enable weather</legend>
-	<i>Choosing any interval automatically enables the weather.</i>
-        <input name="key6" id="key6-4" value="4" checked="checked" type="radio">
-        <label for="key6-4">Weather off</label>
-        <input name="key6" id="key6-5" value="5" type="radio">
-        <label for="key6-5">15 minutes</label>
+    <legend>Weather Enabled</legend>
+    <i>Choose how often the weather updates.</i><br>
+    <b>THE WEATHER WILL ONLY SHOW IF YOU HAVE SECOND SCREEN ENABLED. See "Beta features/advanced" section.</b>
+        	<input name="key62" id="key62-4" value="4" checked="checked" type="radio">
+        <label for="key62-4">Off</label>
+		<input name="key62" id="key62-5" value="5" type="radio">
+        <label for="key62-5">On</label>
+</fieldset>
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Update Interval</legend>
+    <i>Choose how often the weather updates.</i>
+        	<input name="key6" id="key6-4" value="4" checked="checked" type="radio">
+        <label for="key6-4">15 minutes</label>
+		<input name="key6" id="key6-5" value="5" type="radio">
+        <label for="key6-5">30 minutes</label>
 		<input name="key6" id="key6-6" value="6" type="radio">
-        <label for="key6-6">30 minutes</label>
-		<input name="key6" id="key6-7" value="7" type="radio">
-        <label for="key6-7">45 minutes</label>
-		<input name="key6" id="key6-8" value="8" type="radio">
+        <label for="key6-6">45 minutes</label>
+		<input name="key7" id="key6-7" value="7" type="radio">
         <label for="key6-8">60 minutes</label>
 </fieldset>
 
@@ -120,6 +132,7 @@ will be added soon!
 
 <fieldset data-role="controlgroup" data-mini="true">
  <legend><h4>Specific coordinates:</h4></legend>
+ <i>This is only if you have the above option on "Specified longitude and latitude".</i>
     <div class="ui-field-contain">
       <label for="key60" id="label_key60">Longitude</label>
       <input name="key60" id="trans_key60" placeholder="Enter longitude" value="0.00" data-mini="true" type="text" maxlength="8">
@@ -137,8 +150,7 @@ will be added soon!
 </b><br><hr>
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Extra Screen</legend>
-	<i>Will enable a "second screen". If enabled, when you shake your watch it will display the other 2 pieces of data
-	that aren't in the slot below the time. Currently this screen doesn't do much.</i>
+	<i>Will enable a "second screen". If enabled, a screen will show with more info such as the weather.</i>
         <input name="key7" id="key7-4" value="4" checked="checked" type="radio">
         <label for="key7-4">Off</label>
         <input name="key7" id="key7-5" value="5" type="radio">
@@ -147,7 +159,7 @@ will be added soon!
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Battery Bar</legend>
-	<i>If enabled, a white bar will be displayed below the time (and above the slot) indicating the watch's battery level.</i>
+	<i>If enabled, a white bar will be displayed below the bottom slot indicating the watch's battery level.</i>
         <input name="key8" id="key8-5" value="5" checked="checked" type="radio">
         <label for="key8-5">On</label>
         <input name="key8" id="key8-4" value="4" type="radio">
@@ -168,8 +180,7 @@ will be added soon!
         <h3>Translations</h3>
 <fieldset data-role="controlgroup" data-mini="true">
 <hr>
-<b> This section is IS FOR USERS USING 0.2 BETA AND HIGHER. You can check if you're up to date by opening the watchface
-with your phone connected and settings screen closed. The watchface will tell you whether or not you're up to date.
+<b> Translations are for users rocking 0.2 beta or higher.
 </b><br><hr><br>
  <legend><h4>Sober word pack:</h4></legend>
     <div class="ui-field-contain">
@@ -275,7 +286,7 @@ with your phone connected and settings screen closed. The watchface will tell yo
     <div data-role="collapsible">
         <h3>Information and Support</h3>
 <p>Newest watchface version: 0.2.1 beta <br><br>
-Website version: 0.7.2<br><br>
+Website version: 0.7.3<br><br>
 <b>Credits:</b><br> Edwin Finch - Lead developer<br><br>
 <i>www.edwinfinch.com/pebble/ see all my projects</i><br><br>
 Khal Harris - Image, phrase and promotional creation/support (<i>@stuffkhalwrites</i>)<br><br>
@@ -314,6 +325,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 		  'extrascreen':     Number( $("input[name=key7]:checked").val() ),
 		  'batterybar':     Number( $("input[name=key8]:checked").val() ),
 		  'vibeonupdate': Number( $("input[name=key9]:checked").val() ),
+		  'weatherenabled': Number( $("input[name=key62]:checked").val() ),
 		  'trans_sober1': $("input[name=key30]").val(),
           	  'trans_sober2': $("input[name=key31]").val(),
           	  'trans_sober3': $("input[name=key32]").val(),
