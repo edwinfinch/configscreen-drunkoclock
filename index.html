@@ -309,6 +309,17 @@
         <input name="key11" id="key11-4" value="4" type="radio">
         <label for="key11-4">Off</label>
 </fieldset>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Auto close extrascreen</legend>
+	<i>Having this on automatically  closes the extrascreen after 15 seconds. Having this off can make the watchface
+	less stable (more prone to crashes)
+	<br><b>BETA TESTERS: This is not functional yet. It is coming in 0.3.1.</b></i>
+        <input name="key13" id="key13-5" value="5" checked="checked" type="radio">
+        <label for="key13-5">On</label>
+        <input name="key13" id="key13-4" value="4" type="radio">
+        <label for="key13-4">Off</label>
+</fieldset>
     </div>
     <div data-role="collapsible">
         <h3>Information and Support</h3>
@@ -355,6 +366,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 		  'fetchtype': Number( $("input[name=key10]:checked").val() ),
 		  'bootsplash': Number( $("input[name=key11]:checked").val() ),
 		  'updatefrequency': Number( $("input[name=key12]:checked").val() ),
+		  'autoclose': Number( $("input[name=key13]:checked").val() ),
 		  'weatherenabled': Number( $("input[name=key62]:checked").val() ),
 		  'temppref': Number( $("input[name=key63]:checked").val() ),
 		  'trans_sober1': $("input[name=key30]").val(),
@@ -418,6 +430,8 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
           $("input[name=key11]").checkboxradio('refresh');
           $("input[name=key12][id=key12-"+ls_pto["updatefrequency"]+"]").prop('checked',true);
           $("input[name=key12]").checkboxradio('refresh');
+          $("input[name=key13][id=key13-"+ls_pto["autoclose"]+"]").prop('checked',true);
+          $("input[name=key13]").checkboxradio('refresh');
           $("input[name=key62][id=key62-"+ls_pto["weatherenabled"]+"]").prop('checked',true);
           $("input[name=key62]").checkboxradio('refresh');
           $("input[name=key63][id=key63-"+ls_pto["temppref"]+"]").prop('checked',true);
