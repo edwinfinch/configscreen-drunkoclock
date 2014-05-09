@@ -106,7 +106,16 @@
         <input name="key5" id="key5-5" value="5" type="radio">
         <label for="key5-5">Bluetooth status</label>
         <input name="key5" id="key5-6" value="6" type="radio">
-        <label for="key5-6">Nothing</label>
+        <label for="key5-6">Custom text (not working yet)</label>
+        <input name="key5" id="key5-7" value="7" type="radio">
+        <label for="key5-7">Nothing</label>
+</fieldset>
+<fieldset data-role="controlgroup" data-mini="true">
+ <legend><h4>Custom Slot Text:</h4></legend>
+ <b>This is not out yet. It is coming in 0.3.1 beta.</b>
+    <div class="ui-field-contain">
+      <input name="key14" id="slotcustomtext" placeholder="Enter custom slot text" value="Are you dreaming?" data-mini="true" type="text" maxlength="8">
+    </div>
 </fieldset>
 
     </div>
@@ -369,6 +378,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 		  'autoclose': Number( $("input[name=key13]:checked").val() ),
 		  'weatherenabled': Number( $("input[name=key62]:checked").val() ),
 		  'temppref': Number( $("input[name=key63]:checked").val() ),
+		  'slotcustomtext': $("input[name=key14]").val(),
 		  'trans_sober1': $("input[name=key30]").val(),
           	  'trans_sober2': $("input[name=key31]").val(),
           	  'trans_sober3': $("input[name=key32]").val(),
@@ -437,6 +447,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
           $("input[name=key63][id=key63-"+ls_pto["temppref"]+"]").prop('checked',true);
           $("input[name=key63]").checkboxradio('refresh');
           if ("trans_sober1" in ls_pto) {
+            $("input[name=key14]").val(ls_pto["slotcustomtext"]);
             $("input[name=key30]").val(ls_pto["trans_sober1"]);
             $("input[name=key31]").val(ls_pto["trans_sober2"]);
             $("input[name=key32]").val(ls_pto["trans_sober3"]);
