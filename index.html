@@ -40,6 +40,27 @@
         <label for="key1-6">Wasted (heavy words, like "fucking")</label>
 </fieldset>
 
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Word Update Frequency</legend>
+    <i>How often should the swear word update itself? Every... <br><b>BETA TESTERS: This does not work yet.
+    	It is coming in 0.3.1 beta.
+    </b>
+    </i>
+        <input name="key12" id="key12-4" value="4" checked="checked" type="radio">
+        <label for="key12-4">1 minute</label>
+        <input name="key12" id="key12-5" value="5" type="radio">
+        <label for="key12-5">5 minutes</label>
+	<input name="key12" id="key12-6" value="6" type="radio">
+        <label for="key12-6">10 minutes</label>
+        <input name="key12" id="key12-7" value="7" type="radio">
+        <label for="key12-7">15 minutes</label>
+        <input name="key12" id="key12-8" value="8" type="radio">
+        <label for="key12-8">30 minutes</label>
+        <input name="key12" id="key12-9" value="9" type="radio">
+        <label for="key12-9">60 minutes</label>
+</fieldset>
+
+
     </div>
     <div data-role="collapsible">
         <h3>Features</h3>
@@ -282,7 +303,7 @@
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Version Boot Splash</legend>
 	<i>Disabling this will turn off the "D.O.C. version x.x.x [beta/release] on boot and will go right to the time.
-	BETA TESTERS: This is not functional yet. It is coming in 0.3.1.<br><b></b></i>
+	<br><b>BETA TESTERS: This is not functional yet. It is coming in 0.3.1.</b></i>
         <input name="key11" id="key11-5" value="5" checked="checked" type="radio">
         <label for="key11-5">On</label>
         <input name="key11" id="key11-4" value="4" type="radio">
@@ -333,6 +354,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 		  'vibeonupdate': Number( $("input[name=key9]:checked").val() ),
 		  'fetchtype': Number( $("input[name=key10]:checked").val() ),
 		  'bootsplash': Number( $("input[name=key11]:checked").val() ),
+		  'updatefrequency': Number( $("input[name=key12]:checked").val() ),
 		  'weatherenabled': Number( $("input[name=key62]:checked").val() ),
 		  'temppref': Number( $("input[name=key63]:checked").val() ),
 		  'trans_sober1': $("input[name=key30]").val(),
@@ -394,6 +416,8 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
           $("input[name=key10]").checkboxradio('refresh');
           $("input[name=key11][id=key11-"+ls_pto["bootsplash"]+"]").prop('checked',true);
           $("input[name=key11]").checkboxradio('refresh');
+          $("input[name=key12][id=key12-"+ls_pto["updatefrequency"]+"]").prop('checked',true);
+          $("input[name=key12]").checkboxradio('refresh');
           $("input[name=key62][id=key62-"+ls_pto["weatherenabled"]+"]").prop('checked',true);
           $("input[name=key62]").checkboxradio('refresh');
           $("input[name=key63][id=key63-"+ls_pto["temppref"]+"]").prop('checked',true);
