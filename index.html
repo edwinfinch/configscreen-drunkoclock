@@ -106,7 +106,7 @@
 
 <fieldset data-role="controlgroup" data-mini="true">
     <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-    <legend>Bottom Slot (0.2 beta and above)</legend>
+    <legend>Bottom Slot</legend>
 	<i>Insert X into the bottom line, below the time.</i>
         <input name="key5" id="key5-4" value="4" checked="checked" type="radio">
         <label for="key5-4">Date</label>
@@ -119,7 +119,7 @@
 </fieldset>
 <fieldset data-role="controlgroup" data-mini="true">
  <legend><h4>Custom Slot Text:</h4></legend>
- <b>This is not out yet. It is coming in 0.4 beta.</b>
+ <b>This is not out yet. It is coming in 0.4.1 beta.</b>
     <div class="ui-field-contain">
       <input name="key14" id="slotcustomtext" placeholder="Enter custom slot text" value="Are you dreaming?" data-mini="true" type="text" maxlength="21">
     </div>
@@ -146,14 +146,22 @@
         <label for="key6-4">Weather off</label>
         	<input name="key6" id="key6-5" value="5" checked="checked" type="radio">
         <label for="key6-5">Weather on</label>
-        <!--
-		<input name="key6" id="key6-6" value="6" type="radio">
-        <label for="key6-6">30 minutes</label>
-		<input name="key6" id="key6-7" value="7" type="radio">
-        <label for="key6-7">45 minutes</label>
-		<input name="key6" id="key6-8" value="8" type="radio">
-        <label for="key6-8">60 minutes</label>
-        -->
+</fieldset>
+
+<hr>
+    <b> Update frequency is for users rocking 0.4 beta and higher.
+</b><br><hr>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Weather Update Frequency</legend>
+    <input name="key14" id="key14-4" value="4" checked="checked" type="radio">
+        <label for="key14-4">30 minutes</label>
+    <input name="key14" id="key14-5" value="5" checked="checked" type="radio">
+        <label for="key14-5">15 minutes</label>
+    <input name="key14" id="key14-6" value="6" checked="checked" type="radio">
+        <label for="key14-6">45 minutes</label>
+    <input name="key14" id="key14-7" value="7" checked="checked" type="radio">
+        <label for="key14-7">60 minutes</label>
 </fieldset>
 <!--
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
@@ -181,9 +189,6 @@
     
     <div data-role="collapsible" >
         <h3>Translations</h3>
-        <hr>
-<b> Translations are for users rocking 0.2 beta or higher.
-</b><br><hr><br>
 <fieldset data-role="controlgroup" data-mini="true">
  <legend><h4>Sober word pack:</h4></legend>
     <div class="ui-field-contain">
@@ -337,8 +342,8 @@
     </div>
     <div data-role="collapsible">
         <h3>Information and Support</h3>
-<p>Newest watchface version: 0.3.1 beta <br><br>
-Website version: 0.8.1<br><br>
+<p>Newest watchface version: 0.4 beta <br><br>
+Website version: 0.8.2<br><br>
 <b>Credits:</b><br> Edwin Finch - Lead developer<br><br>
 <i>www.edwinfinch.com/pebble/ see all my projects</i><br><br>
 Khal Harris - Image, phrase and promotional creation/support (<i>@stuffkhalwrites</i>)<br><br>
@@ -382,7 +387,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 		  'bootsplash': Number( $("input[name=key11]:checked").val() ),
 		  'updatefrequency': Number( $("input[name=key12]:checked").val() ),
 		  'autoclose': Number( $("input[name=key13]:checked").val() ),
-		  'weatherenabled': Number( $("input[name=key62]:checked").val() ),
+		  'weathertimer': Number( $("input[name=key14]:checked").val() ),
 		  'temppref': Number( $("input[name=key63]:checked").val() ),
 		  'slotcustomtext': $("input[name=key14]").val(),
 		  'trans_sober1': $("input[name=key30]").val(),
@@ -448,8 +453,8 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
           $("input[name=key12]").checkboxradio('refresh');
           $("input[name=key13][id=key13-"+ls_pto["autoclose"]+"]").prop('checked',true);
           $("input[name=key13]").checkboxradio('refresh');
-          $("input[name=key62][id=key62-"+ls_pto["weatherenabled"]+"]").prop('checked',true);
-          $("input[name=key62]").checkboxradio('refresh');
+          $("input[name=key14][id=key62-"+ls_pto["weathertimer"]+"]").prop('checked',true);
+          $("input[name=key14]").checkboxradio('refresh');
           $("input[name=key63][id=key63-"+ls_pto["temppref"]+"]").prop('checked',true);
           $("input[name=key63]").checkboxradio('refresh');
           if ("trans_sober1" in ls_pto) {
