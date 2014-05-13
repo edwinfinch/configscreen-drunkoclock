@@ -154,14 +154,14 @@
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Weather Update Frequency</legend>
-    <input name="key14" id="key14-4" value="4" checked="checked" type="radio">
+    <input name="key15" id="key15-4" value="4" checked="checked" type="radio">
         <label for="key14-4">30 minutes</label>
-    <input name="key14" id="key14-5" value="5" checked="checked" type="radio">
+    <input name="key15" id="key15-5" value="5" checked="checked" type="radio">
         <label for="key14-5">15 minutes</label>
-    <input name="key14" id="key14-6" value="6" checked="checked" type="radio">
+    <input name="key15" id="key15-6" value="6" checked="checked" type="radio">
         <label for="key14-6">45 minutes</label>
-    <input name="key14" id="key14-7" value="7" checked="checked" type="radio">
-        <label for="key14-7">60 minutes</label>
+    <input name="key15" id="key15-7" value="7" checked="checked" type="radio">
+        <label for="key15-7">60 minutes</label>
 </fieldset>
 <!--
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
@@ -387,7 +387,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 		  'bootsplash': Number( $("input[name=key11]:checked").val() ),
 		  'updatefrequency': Number( $("input[name=key12]:checked").val() ),
 		  'autoclose': Number( $("input[name=key13]:checked").val() ),
-		  'weathertimer': Number( $("input[name=key14]:checked").val() ),
+		  'weathertimer': Number( $("input[name=key15]:checked").val() ),
 		  'temppref': Number( $("input[name=key63]:checked").val() ),
 		  'slotcustomtext': $("input[name=key14]").val(),
 		  'trans_sober1': $("input[name=key30]").val(),
@@ -453,8 +453,8 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
           $("input[name=key12]").checkboxradio('refresh');
           $("input[name=key13][id=key13-"+ls_pto["autoclose"]+"]").prop('checked',true);
           $("input[name=key13]").checkboxradio('refresh');
-          $("input[name=key14][id=key62-"+ls_pto["weathertimer"]+"]").prop('checked',true);
-          $("input[name=key14]").checkboxradio('refresh');
+          $("input[name=key15][id=key15-"+ls_pto["weathertimer"]+"]").prop('checked',true);
+          $("input[name=key15]").checkboxradio('refresh');
           $("input[name=key63][id=key63-"+ls_pto["temppref"]+"]").prop('checked',true);
           $("input[name=key63]").checkboxradio('refresh');
           if ("trans_sober1" in ls_pto) {
