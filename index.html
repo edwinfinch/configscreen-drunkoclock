@@ -29,7 +29,7 @@
     <div data-role="collapsible" data-collapsed="false">
         <h3>Look and Feel</h3>
 
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
     <legend>Theme</legend>
         <input name="key0" id="key0-4" data-type="int" value="4" checked="checked" type="radio">
         <label for="key0-4">Dark</label>
@@ -70,9 +70,9 @@
 
     </div>
 <div data-role="collapsible" data-collapsed="false">
-        <h3>Date (disabled)</h3>
+        <h3>Date/Time (disabled)</h3>
 
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
 <b>This section is not enabled yet. It will work on the next release.
     </b>
     <legend>Custom Date Format</legend>
@@ -94,6 +94,16 @@
         <label for="key17-5">MM/DD/YY</label>
 	<input name="key17" id="key17-6" value="6" type="radio">
         <label for="key17-6">June 8th, 2014</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+    <legend>Seconds</legend>
+    <i>Seconds will show up in the top right corner of the screen.</i>
+	<input name="key4" id="key4-4" value="4" checked="checked" type="radio">
+        <label for="key4-4">Off</label>
+        <input name="key4" id="key4-5" value="5" type="radio">
+        <label for="key4-5">On</label>
 </fieldset>
 
 </div>
@@ -125,16 +135,6 @@
 
 <fieldset data-role="controlgroup" data-mini="true">
     <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-    <legend>Seconds</legend>
-    <i>Seconds will show up in the top right corner of the screen.</i>
-	<input name="key4" id="key4-4" value="4" checked="checked" type="radio">
-        <label for="key4-4">Off</label>
-        <input name="key4" id="key4-5" value="5" type="radio">
-        <label for="key4-5">On</label>
-</fieldset>
-
-<fieldset data-role="controlgroup" data-mini="true">
-    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Bottom Slot</legend>
 	<i>Insert X into the bottom line, below the time.</i>
         <input name="key5" id="key5-4" value="4" checked="checked" type="radio">
@@ -161,7 +161,7 @@
     <b> Weather is for users rocking 0.3 beta and higher.
 </b><br><hr>
 
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
     <legend>Temperature Preference</legend>
         	<input name="key63" id="key63-4" value="4" checked="checked" type="radio">
         <label for="key63-4">Celsius</label>
@@ -169,7 +169,7 @@
         <label for="key63-5">Fahrenheit</label>
 </fieldset>
 
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
     <legend>Enable Weather</legend>
     <input name="key6" id="key6-4" value="4" checked="checked" type="radio">
         <label for="key6-4">Weather off</label>
@@ -323,7 +323,7 @@
         <hr>
 <b> These features work on 0.2.1 beta and up.
 </b><br><hr>
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
     <legend>Extra Screen</legend>
 	<i>If enabled, shake the watch to view extra information. <b>This feature is unstable. Use at your own risk.</b></i>
         <input name="key7" id="key7-4" value="4" checked="checked" type="radio">
@@ -332,7 +332,7 @@
         <label for="key7-5">On</label>
 </fieldset>
 
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
     <legend>Battery Bar</legend>
 	<i>If enabled, a white bar will be displayed below the bottom slot indicating the watch's battery level.</i>
         <input name="key8" id="key8-5" value="5" checked="checked" type="radio">
@@ -341,7 +341,7 @@
         <label for="key8-4">Off</label>
 </fieldset>
 
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
     <legend>Vibrate On Watchface Update</legend>
 	<i>If enabled, the watchface will vibrate on the event of a watchface update being available.</i>
         <input name="key9" id="key9-5" value="5" checked="checked" type="radio">
@@ -350,7 +350,7 @@
         <label for="key9-4">Off</label>
 </fieldset>
 
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
     <legend>Version Boot Splash</legend>
 	<i>Disabling this will turn off the "D.O.C. version x.x.x [beta/release] on boot and will go right to the time.</i>
         <input name="key11" id="key11-5" value="5" checked="checked" type="radio">
@@ -359,7 +359,7 @@
         <label for="key11-4">Off</label>
 </fieldset>
 
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
     <legend>Auto close extrascreen</legend>
 	<i>Having this on automatically  closes the extrascreen after 15 seconds. Having this off can make the watchface
 	less stable (more prone to crashes)</i>
@@ -372,7 +372,7 @@
     <div data-role="collapsible">
         <h3>Information and Support</h3>
 <p>Newest watchface version: 0.4 beta <br><br>
-Website version: 0.8.2<br><br>
+Website version: 0.8.3<br><br>
 <b>Credits:</b><br> Edwin Finch - Lead developer<br><br>
 <i>www.edwinfinch.com/pebble/ see all my projects</i><br><br>
 Khal Harris - Image, phrase and promotional creation/support (<i>@stuffkhalwrites</i>)<br><br>
