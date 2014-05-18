@@ -74,7 +74,7 @@
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
 <b>This section is not enabled yet. It will work on the next release.
-    </b>
+    </b><br>
     <legend>Custom Date Format</legend>
     <i>Enable a format other than "[Swear], it's [day]"
     </i>
@@ -394,7 +394,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
         <div class="ui-body ui-body-c">
           <fieldset class="ui-grid-a">
               <div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Cancel</button></div>
-              <div class="ui-block-b"><button type="submit" data-theme="a" id="b-submit">Submit</button></div>
+              <div class="ui-block-b"><button type="submit" data-theme="a" id="b-submit">Save</button></div>
           </fieldset>
         </div>
       </div>
@@ -417,6 +417,8 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 		  'updatefrequency': Number( $("input[name=key12]:checked").val() ),
 		  'autoclose': Number( $("input[name=key13]:checked").val() ),
 		  'weathertimer': Number( $("input[name=key15]:checked").val() ),
+		  'customdate': Number( $("input[name=key16]:checked").val() ),
+		  'dateformat': Number( $("input[name=key17]:checked").val() ),
 		  'temppref': Number( $("input[name=key63]:checked").val() ),
 		  'slotcustomtext': $("input[name=key14]").val(),
 		  'trans_sober1': $("input[name=key30]").val(),
@@ -484,6 +486,10 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
           $("input[name=key13]").checkboxradio('refresh');
           $("input[name=key15][id=key15-"+ls_pto["weathertimer"]+"]").prop('checked',true);
           $("input[name=key15]").checkboxradio('refresh');
+          $("input[name=key16][id=key16-"+ls_pto["customdate"]+"]").prop('checked',true);
+          $("input[name=key16]").checkboxradio('refresh');
+          $("input[name=key17][id=key17-"+ls_pto["dateformat"]+"]").prop('checked',true);
+          $("input[name=key17]").checkboxradio('refresh');
           $("input[name=key63][id=key63-"+ls_pto["temppref"]+"]").prop('checked',true);
           $("input[name=key63]").checkboxradio('refresh');
           if ("trans_sober1" in ls_pto) {
