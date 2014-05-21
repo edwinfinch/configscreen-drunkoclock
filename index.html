@@ -439,6 +439,7 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 		  'customdate': Number( $("input[name=key16]:checked").val() ),
 		  'dateformat': Number( $("input[name=key17]:checked").val() ),
 		  'animations': Number( $("input[name=key18]:checked").val() ),
+		  'progressivedrunk': Number( $("input[name=key19]:checked").val() ),
 		  'temppref': Number( $("input[name=key63]:checked").val() ),
 		  'slotcustomtext': $("input[name=key14]").val(),
 		  'trans_sober1': $("input[name=key30]").val(),
@@ -512,6 +513,8 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
           $("input[name=key17]").checkboxradio('refresh');
           $("input[name=key18][id=key18-"+ls_pto["animations"]+"]").prop('checked',true);
           $("input[name=key18]").checkboxradio('refresh');
+          $("input[name=key19][id=key19-"+ls_pto["progressivedrunk"]+"]").prop('checked',true);
+          $("input[name=key19]").checkboxradio('refresh');
           $("input[name=key63][id=key63-"+ls_pto["temppref"]+"]").prop('checked',true);
           $("input[name=key63]").checkboxradio('refresh');
           if ("trans_sober1" in ls_pto) {
