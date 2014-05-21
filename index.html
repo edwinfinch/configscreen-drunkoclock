@@ -56,7 +56,7 @@
         <input name="key19" id="key19-4" value="4" checked="checked" type="radio">
         <label for="key19-4">Off</label>
         <input name="key19" id="key19-5" value="5" type="radio">
-        <label for="key19-5">On (coming in next release)</label>
+        <label for="key19-5">On</label>
 </fieldset>
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
@@ -126,6 +126,24 @@
     <div data-role="collapsible">
         <h3>Features</h3>
 
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Extra Screen</legend>
+	<i>If enabled, shake the watch to view extra information.</i>
+        <input name="key7" id="key7-5" value="5" checked="checked" type="radio">
+        <label for="key7-5">On</label>
+        <input name="key7" id="key7-4" value="4" type="radio">
+        <label for="key7-4">Off</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Battery Bar</legend>
+	<i>If enabled, a white bar will be displayed below the bottom slot indicating the watch's battery level.</i>
+        <input name="key8" id="key8-5" value="5" checked="checked" type="radio">
+        <label for="key8-5">On</label>
+        <input name="key8" id="key8-4" value="4" type="radio">
+        <label for="key8-4">Off</label>
+</fieldset>
+
 <fieldset data-role="controlgroup" data-mini="true">
     <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Bluetooth disconnect alert</legend>
@@ -153,7 +171,7 @@
     <legend>Bottom Slot</legend>
 	<i>Insert X into the bottom line, below the time.</i>
         <input name="key5" id="key5-4" value="4" checked="checked" type="radio">
-        <label for="key5-4">Date</label>
+        <label for="key5-4">Date (change format in 'Date/Time')</label>
         <input name="key5" id="key5-5" value="5" type="radio">
         <label for="key5-5">Bluetooth status</label>
         <input name="key5" id="key5-6" value="6" type="radio">
@@ -166,16 +184,13 @@
 <fieldset data-role="controlgroup" data-mini="true">
  <legend><h4>Custom Slot Text:</h4></legend>
     <div class="ui-field-contain">
-      <input name="key14" id="slotcustomtext" placeholder="Enter custom slot text" value="Are you dreaming?" data-mini="true" type="text" maxlength="21">
+      <input name="key14" id="slotcustomtext" placeholder="Enter custom slot text" value="Only 90s kids" data-mini="true" type="text" maxlength="21">
     </div>
 </fieldset>
 
     </div>
     <div data-role="collapsible">
         <h3>Weather</h3>
-        <hr>
-    <b> Weather is for users rocking 0.3 beta and higher.
-</b><br><hr>
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Temperature Preference</legend>
@@ -192,10 +207,6 @@
         	<input name="key6" id="key6-4" value="4" type="radio">
         <label for="key6-4">Weather off</label>
 </fieldset>
-
-<hr>
-    <b> Update frequency is for users rocking 0.4 beta and higher.
-</b><br><hr>
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Weather Update Frequency</legend>
@@ -340,25 +351,6 @@
     
     <div data-role="collapsible">
         <h3>Advanced</h3>
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-    <legend>Extra Screen</legend>
-	<i>If enabled, shake the watch to view extra information. <b>This feature is not unstable as of 0.5.0 beta.
-		Download it now from: edwinfinch.com/drunkoclock/
-	</b></i>
-        <input name="key7" id="key7-4" value="4" checked="checked" type="radio">
-        <label for="key7-4">Off</label>
-        <input name="key7" id="key7-5" value="5" type="radio">
-        <label for="key7-5">On</label>
-</fieldset>
-
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-    <legend>Battery Bar</legend>
-	<i>If enabled, a white bar will be displayed below the bottom slot indicating the watch's battery level.</i>
-        <input name="key8" id="key8-5" value="5" checked="checked" type="radio">
-        <label for="key8-5">On</label>
-        <input name="key8" id="key8-4" value="4" type="radio">
-        <label for="key8-4">Off</label>
-</fieldset>
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Vibrate On Watchface Update</legend>
@@ -371,7 +363,7 @@
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Version Boot Splash</legend>
-	<i>Disabling this will turn off the "D.O.C. version x.x.x [beta/release] on boot and will go right to the time.</i>
+	<i>Disabling this will turn off the "D.O.C. version x.x.x [rls-[build number]] on boot and will go right to the time.</i>
         <input name="key11" id="key11-5" value="5" checked="checked" type="radio">
         <label for="key11-5">On</label>
         <input name="key11" id="key11-4" value="4" type="radio">
@@ -379,8 +371,8 @@
 </fieldset>
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-    <legend>Auto close extrascreen</legend>
-	<i>Having this on automatically  closes the extrascreen after 15 seconds. Having this off can make the watchface
+    <legend>Auto close extra screen</legend>
+	<i>Having this on automatically  closes the extra screen after 15 seconds. Having this off can make the watchface
 	less stable (more prone to crashes)</i>
         <input name="key13" id="key13-5" value="5" checked="checked" type="radio">
         <label for="key13-5">On</label>
@@ -390,19 +382,25 @@
     </div>
     <div data-role="collapsible">
         <h3>Information and Support</h3>
-<p>Newest watchface version: 1.0.1 RC-b11 <br><br>
-Website version: 0.9.1<br><br>
+<p>Newest watchface version: 1.0.2 rls-b.3 <br><br>
+Website version: 1.0.0<br><br>
 <b>Credits:</b><br> Edwin Finch - Lead developer<br><br>
 <i>www.edwinfinch.com/pebble/ see all my projects</i><br><br>
-Khal Harris - Image, phrase and promotional creation/support (<i>@stuffkhalwrites</i>)<br><br>
+Khal Harris - Image and phrase support (<i>@stuffkhalwrites</i>)<br><br>
 Adam O. - For being a boss, being super patient, and helping me debug the Javascript<br><br>
 Beta testers - For making this a better watchface<br><br>
 Community - For being amazing and always keeping me laughing<br><br>
 
 <b><i>SUPPORT</i></b><br>
-<p>If you need support or something is wrong, I currently assume you're a beta
-tester, so please post the issue to the Google+ community. If you can't, or need
-a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
+<p>Please contact <b>contact@edwinfinch.com</b> if you need any technical support, want to
+	report a bug that you are experiencing, or suggest a feature. I will get back to you 
+	within a day (most likely) and try to fix you ASAP.
+	<br><br>
+	If you want to see the rest of my software, go to www.edwinfinch.com/pebble/.
+	<br><br>
+	If you want to be a beta tester for this watchface or any other software of mine,
+	join the Google+ community by going to the link: http://bit.ly/edwinsbetas
+</p>
 </p>
 
 </p>
@@ -570,6 +568,6 @@ a faster way, contact the developer (Edwin) at: contact@edwinfinch.com</p>
 
       });
     </script>
-    <h5>By: Edwin Finch (Magnitude)<br>and Khal Harris (/u/MiracleFish)</h5>
+    <h5>By: Edwin Finch (Magnitude or /u/EdwinForTheWin)</h5>
   </body>
 </html>
