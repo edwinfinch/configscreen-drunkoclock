@@ -181,6 +181,27 @@
         <input name="key5" id="key5-8" value="8" type="radio">
         <label for="key5-8">Nothing</label>
 </fieldset>
+
+<hr>
+<b>The the "Vibrate Every..." feature is for beta testers only and will be added to official
+releases soon.<br>
+	Join the beta community at http://bit.ly/edwinsbetas/.
+</b>
+<hr>
+
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Vibrate Every...</legend>
+        <input name="key20" id="key20-4" value="4" checked="checked" type="radio">
+        <label for="key20-4">(Never)</label>
+        <input name="key20" id="key20-5" value="5" type="radio">
+        <label for="key20-5">15 minutes</label>
+        <input name="key20" id="key20-6" value="6" type="radio">
+        <label for="key20-6">30 minutes</label>
+        <input name="key20" id="key20-7" value="7" type="radio">
+        <label for="key20-7">hour</label>
+</fieldset>
+
 <fieldset data-role="controlgroup" data-mini="true">
  <legend><h4>Custom Slot Text:</h4></legend>
     <div class="ui-field-contain">
@@ -444,6 +465,7 @@ Community - For being amazing and always keeping me laughing<br><br>
 		  'dateformat': Number( $("input[name=key17]:checked").val() ),
 		  'animations': Number( $("input[name=key18]:checked").val() ),
 		  'progressivedrunk': Number( $("input[name=key19]:checked").val() ),
+		  'hourlyvibe': Number( $("input[name=key20]:checked").val() ),
 		  'temppref': Number( $("input[name=key63]:checked").val() ),
 		  'slotcustomtext': $("input[name=key14]").val(),
 		  'trans_sober1': $("input[name=key30]").val(),
@@ -519,6 +541,8 @@ Community - For being amazing and always keeping me laughing<br><br>
           $("input[name=key18]").checkboxradio('refresh');
           $("input[name=key19][id=key19-"+ls_pto["progressivedrunk"]+"]").prop('checked',true);
           $("input[name=key19]").checkboxradio('refresh');
+          $("input[name=key20][id=key20-"+ls_pto["hourlyvibe"]+"]").prop('checked',true);
+          $("input[name=key20]").checkboxradio('refresh');
           $("input[name=key63][id=key63-"+ls_pto["temppref"]+"]").prop('checked',true);
           $("input[name=key63]").checkboxradio('refresh');
           if ("trans_sober1" in ls_pto) {
